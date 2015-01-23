@@ -35,8 +35,6 @@ class Controller
                         
 					$Tovari_Woocomerce = new Tovari_Woocomerce;
 
-					// МЕтод отладки Проверяем  что передаём в объекте
-					// $Tovari_Woocomerce ->echoECHO($tovar_from_hotline);
 
 					$Tovari_Woocomerce ->add_db_product($tovar_from_hotline);
                     break;
@@ -56,8 +54,8 @@ class Controller
 						echo '<br>';
 
 						// Запускаем класс Spisok_Tovarov_HotLine с методом search с аргументом пришедшем в $_GET (модель, название или тип товара)
-						$New_Tovar = new Spisok_Tovarov_HotLine();
-						$New_Tovar -> search($_GET["query"]);
+						$new_Tovar = new Spisok_Tovarov_HotLine();
+						$new_Tovar -> search($_GET["query"]);
                         break;
 					
 				default:
